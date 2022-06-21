@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  somapp1final:
+    image: som3customer:v1 
+    build: . # location of dockerfile 
+    container_name: som3cc0011
+    ports:
+    - "1128:80"
+    restart: always 
+    environment: 
+      deploy: "app2"
